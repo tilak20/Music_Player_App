@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CrdView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/SearchView"
+            style="@style/Widget.Material3.Search.ActionButton.Overflow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_search"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:focusable="true"
+            app:defaultQueryHint="Search"
+            app:queryHint="Search" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imgSort"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_below="@id/CrdView2"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/sort"
+        android:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/txtSort"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_below="@id/CrdView2"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_toEndOf="@id/imgSort"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/Lottie1"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/white"
+        app:lottie_fileName="98993-three-dots-loading.json"
+        app:lottie_loop="true" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RCView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imgSort"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:scrollbarSize="@dimen/_4sdp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/background_search"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/music_item" />
+
+    <!--    <androidx.fragment.app.FragmentContainerView-->
+    <!--        android:id="@+id/nowPlaying"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_margin="@dimen/_10sdp"-->
+    <!--        android:visibility="gone"-->
+    <!--        tools:layout="@layout/fragment_now_playing" />-->
+</RelativeLayout>

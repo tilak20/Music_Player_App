@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="@dimen/_20sdp"
+    android:theme="@style/Theme.Music_Player_App">
+    <item
+        android:id="@+id/Details"
+        android:title="Details" />
+    <item
+        android:id="@+id/Delete"
+        android:title="Delete" />
+    <item
+        android:id="@+id/Share"
+        android:title="Share" />
+    <item
+        android:id="@+id/SetAs"
+        android:title="Set as" />
+</menu>
